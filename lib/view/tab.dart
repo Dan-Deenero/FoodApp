@@ -16,7 +16,7 @@ class _TabbedPageState extends State<TabbedPage>
     super.initState();
 
     _animationController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 700));
+        AnimationController(vsync: this, duration: const Duration(milliseconds: 700));
     _animation =
         Tween<double>(begin: 0, end: 1).animate(_animationController);
   }
@@ -31,13 +31,13 @@ class _TabbedPageState extends State<TabbedPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tabbed Page'),
+        title: const Text('Tabbed Page'),
       ),
       body: Column(
         children: [
           Container(
             height: 50,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               border: Border(
                 bottom: BorderSide(
                   color: Colors.grey,
@@ -87,7 +87,7 @@ class _TabbedPageState extends State<TabbedPage>
           width: 1,
         ),
       ),
-      padding: EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: AnimatedBuilder(
         animation: _animation,
         builder: (context, child) {
@@ -111,15 +111,15 @@ class _TabbedPageState extends State<TabbedPage>
   Widget _buildTabContent() {
     switch (_selectedIndex) {
       case 0:
-        return Center(
+        return const Center(
           child: Text('Tab 1 content'),
         );
       case 1:
-        return Center(
+        return const Center(
           child: Text('Tab 2 content'),
         );
       case 2:
-        return Center(
+        return const Center(
           child: Text('Tab 3 content'),
         );
       default:

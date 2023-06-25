@@ -140,7 +140,8 @@ class _OfferPageState extends State<OfferPage> {
                 ],
               ),
               sizedHeight(20),
-              SizedBox(
+              Container(
+                alignment: Alignment.center,
                 height: 280.h,
                 child: PageView.builder(
                     controller: controller,

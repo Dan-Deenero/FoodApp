@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:foodui/view/offersection.dart';
+import 'package:foodui/view/mainScreen.dart';
 import 'package:get/get.dart';
 
 const kPrimaryColor = Color(0xff918ae2);
@@ -82,7 +82,7 @@ class NewWidget extends StatelessWidget {
                       backgroundColor: MaterialStateProperty.all(kButtonColor),
                       shape: MaterialStateProperty.all(
                           RoundedRectangleBorder(borderRadius: kBorderRadius))),
-                  onPressed: () => Get.to(const OfferPage()),
+                  onPressed: () => Get.to(const MainScreen()),
                   child: Text(
                     'Get Started',
                     style:
